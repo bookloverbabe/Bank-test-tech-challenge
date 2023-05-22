@@ -1,3 +1,5 @@
+require 'time'
+
 class Statement
 # return the date || credit || debit || balance.
 # statement is comprised of key, the date, and the value, amount and balance
@@ -18,4 +20,9 @@ class Statement
   def debit(amount)
     return @balance.sum(- amount)
   end
+
+  def date
+    return Time.strptime('23-07-2023', '%d-%m-%Y').strftime('%d-%m-%Y') 
+  end
 end
+

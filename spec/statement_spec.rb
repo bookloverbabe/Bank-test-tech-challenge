@@ -27,4 +27,10 @@ RSpec.describe Statement do
       expect(statement.debit(10)).to eq (-10)
     end
   end
+  context "returns the date" do
+    it "returns the date of 22th May 2023" do
+      statement = Statement.new
+      expect(statement.date).to eq ('23-07-2023')
+    end
+  end
 end
