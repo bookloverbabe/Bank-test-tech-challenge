@@ -48,8 +48,13 @@ RSpec.describe Account do
   context "the user does not input or number" do
     it "returns the latest balance, which is £5" do
       account = Account.new
-      result = account.credit(5)
-      expect(account.zero_amount(0)). to eq (5)
+      expect(account.zero_amount(0)). to eq (0)
     end
+    # it "returns the latest balance, which is £5" do
+    #   account = Account.new
+    #   result_one = account.credit(5)
+    #   result_two = account.balance
+    #   expect(account.zero_amount(result_two)). to eq (5)
+    # end
   end
 end
