@@ -13,4 +13,9 @@ class Statement
   def credit(amount)
     return @balance.sum(amount)
   end
+
+  # Debit is a withdrawal
+  def debit(amount)
+    return @balance.sum(- amount)
+  end
 end
