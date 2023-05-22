@@ -17,6 +17,8 @@ Each statement consists of the date, amount (and whether it is a credit or debit
 
 The data must be organised as so:
 date || credit || debit || balance
+
+The data must be stored in key value pairs or a hash, where the date is the key and the value is the amount (+ or - to represent credit or debit) and the balance. This is the statement hash.
 # Requirements
 Deposits, withdrawal.
 Account statement (date, amount, balance) printing.
