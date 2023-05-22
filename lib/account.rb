@@ -28,4 +28,8 @@ class Account
   def valid?(amount)
     (amount.is_a? Numeric) && amount.positive?
   end
+
+  def check(amount)
+    return "Error: please enter a valid amount" unless valid?(amount)
+  end
 end
