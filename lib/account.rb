@@ -24,5 +24,8 @@ class Account
   def date
     return Time.strptime('23-07-2023', '%d-%m-%Y').strftime('%d-%m-%Y') 
   end
-end
 
+  def valid?(amount)
+    (amount.is_a? Numeric) && amount.positive?
+  end
+end

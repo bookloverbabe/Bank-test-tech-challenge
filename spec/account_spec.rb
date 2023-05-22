@@ -33,4 +33,11 @@ RSpec.describe Account do
       expect(account.date).to eq ('23-07-2023')
     end
   end
+
+  context "Is the input a number" do
+    it "checks if the amount is a number that is positive" do
+      account = Account.new
+      expect(account.valid?(500)). to eq (true)
+    end
+  end
 end
