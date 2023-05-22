@@ -1,6 +1,6 @@
 require 'time'
 
-class Statement
+class Account
 # return the date || credit || debit || balance.
 # statement is comprised of key, the date, and the value, amount and balance
   def initialize
