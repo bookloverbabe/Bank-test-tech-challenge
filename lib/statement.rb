@@ -3,7 +3,8 @@ class Statement
     @balance = []
   end
 
-  def balance
+  def balance(amount)
+    return @balance.sum(amount)
   end
 
 end
