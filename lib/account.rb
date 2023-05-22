@@ -32,4 +32,11 @@ class Account
   def check(amount)
     return "Error: please enter a valid amount" unless valid?(amount)
   end
+  
+  # If the user does not  input an amount, return the balance
+  def zero_amount(amount)
+    if amount == 0
+      return @balance.sum
+    end
+  end
 end

@@ -7,9 +7,9 @@ The purpose of this project is to create an application that shows a person's ba
 
 |Input|Process|Output|
 |-----|-------|------|
-Withdraws a sum of money|The amount withdrawn is subtracted from the overall amount in the account|The program returns the statement
-Deposits a sum of money|The amount deposited is added to the overall amount in the account|The program returns the statement
-No money is withdrawn or deposited|Nothing happens to the overall balance|The statement is returned
+|Withdraws a sum of money|The amount withdrawn is subtracted from the overall amount in the account|The program returns the statement|
+|Deposits a sum of money|The amount deposited is added to the overall amount in the account|The program returns the statement|
+|No money is withdrawn or deposited|Nothing happens to the overall balance|The statement is returned|
 
 Each statement consists of the date, amount (and whether it is a credit or debit) and balance.
 

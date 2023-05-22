@@ -44,4 +44,12 @@ RSpec.describe Account do
       expect(account.check('cheese')).to eq ("Error: please enter a valid amount")
     end
   end
+
+  context "the user does not input or number" do
+    it "returns the latest balance, which is £5" do
+      account = Account.new
+      result = account.credit(5)
+      expect(account.zero_amount(0)). to eq (5)
+    end
+  end
 end
