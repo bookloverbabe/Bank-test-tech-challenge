@@ -3,6 +3,7 @@ require_relative 'transaction'
 
 # This class explains what the data does. The action.
 class Account < Transaction
+  ERROR = "Error: please enter a valid amount"
   attr_accessor :bank_statement
   def initialize
     @bank_statement = []
@@ -32,13 +33,6 @@ class Account < Transaction
   end
 
   def check(amount)
-    fail "Error: please enter a valid amount" unless valid?(amount)
-  end
-  
-  # If the user does not input an amount, return the balance
-  def zero_amount(amount)
-    if amount == 0
-      return @transaction.balance.sum
-    end
+    fail ERROR unless valid?(amount)
   end
 end

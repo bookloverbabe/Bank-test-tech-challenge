@@ -13,5 +13,8 @@ class Transaction
     @balance += @credit
   end
 
-  
+  def withdrawal(amount)
+    @balance -= @debit
+  end
+
 end
