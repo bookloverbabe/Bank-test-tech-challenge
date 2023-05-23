@@ -18,5 +18,15 @@ RSpec.describe Transaction do
       transaction = Transaction.new('12-12-2012', 5, 10, 15)
       expect(transaction.balance).to eq(15)
     end
-  end  
+  end 
+  context "define deposit and withdrawal" do
+    it "user deposits £5" do
+      transaction = Transaction.new('12-12-2012', 20, 10, 30)
+      expect {transaction.deposit(20)}.to change {transaction.balance}.by(20)
+    end
+    it "user withdraws £10" do
+      transaction = Transaction.new('12-12-2012', 20, 10, 30)
+      expect {transaction.withdrawal(10)}.to change {transaction.balance}.by(-10)
+    end
+  end 
 end
