@@ -1,8 +1,10 @@
 require 'time'
 
 class Account
+# This class explains what the data does
 # return the date || credit || debit || balance.
 # statement is comprised of key, the date, and the value, amount and balance
+  # Initialize calls upon the 
   def initialize
     @balance = []
   end
@@ -11,14 +13,16 @@ class Account
     return @balance.sum
   end
   
-  # Credit is a deposit
+  # Credit is a deposit, use dependancy injection from transaction class
   def credit(amount)
-    return @balance.sum(amount)
+    @balance.sum(amount)
+      return "#{amount} deposited"
   end
 
   # Debit is a withdrawal
   def debit(amount)
-    return @balance.sum(- amount)
+    @balance.sum(- amount)
+      return "#{amount} withdrawn"
   end
 
   def date
@@ -30,7 +34,7 @@ class Account
   end
 
   def check(amount)
-    return "Error: please enter a valid amount" unless valid?(amount)
+    fail "Error: please enter a valid amount" unless valid?(amount)
   end
   
   # If the user does not  input an amount, return the balance

@@ -10,21 +10,21 @@ RSpec.describe Account do
   context "returns the balance after user deposits a sum" do
     it "user deposits £5" do
       account = Account.new
-      expect(account.credit(5)).to eq(5)
+      expect(account.credit(5)).to eq ("5 deposited")
     end
     it "user deposits £30.25" do
       account = Account.new
-      expect(account.credit(30.25)).to eq(30.25)
+      expect(account.credit(30.25)).to eq("30.25 deposited")
     end
   end
   context "returns the balance after user withdraws an amount" do
     it "user withdraws £1" do
       account = Account.new
-      expect(account.debit(1)).to eq (-1)
+      expect(account.debit(1)).to eq ("1 withdrawn")
     end
     it "user withdraws £10" do
       account = Account.new
-      expect(account.debit(10)).to eq (-10)
+      expect(account.debit(10)).to eq ("10 withdrawn")
     end
   end
   context "returns the date" do

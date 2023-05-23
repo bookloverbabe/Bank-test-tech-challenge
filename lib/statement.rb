@@ -1,5 +1,5 @@
-class Statement
-  def initialize
-    
-  end
-end
+# class Statement
+#   def initialize
+
+#   end
+# end

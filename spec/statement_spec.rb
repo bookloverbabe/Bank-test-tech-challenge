@@ -1,9 +1,9 @@
-require "statement"
+# require "statement"
 
-RSpec.describe "Statement" do
-  it "initializes" do
-    statement = Statement.new
-    expect
-  end
+# RSpec.describe "Statement" do
+#   it "initializes" do
+#     statement = Statement.new
+#     expect
+#   end
 
-end
+# end
