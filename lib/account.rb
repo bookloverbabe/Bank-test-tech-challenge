@@ -30,7 +30,7 @@ class Account
   end
 
   def check(amount)
-    fail "Error: please enter a valid amount" unless valid?(amount)
+    return "Error: please enter a valid amount" unless valid?(amount)
   end
   
   # If the user does not  input an amount, return the balance
