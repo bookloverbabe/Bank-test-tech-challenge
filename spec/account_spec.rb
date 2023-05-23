@@ -9,7 +9,8 @@ RSpec.describe Account do
   # context "returns the balance after user deposits and withdraws a sum" do
   #   it "user deposits £15" do
   #     account = Account.new
-  #     expect(account.credit(15)).to include ("15 deposited")
+  #     account.deposit(15)
+  #     expect(Transaction.credit).to eq("15 deposited")
   #   end
   # end
 end

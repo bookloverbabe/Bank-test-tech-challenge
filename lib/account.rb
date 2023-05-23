@@ -11,18 +11,16 @@ class Account < Transaction
   def create_transaction(date, credit, debit, balance)
     transaction = Transaction.new(date, credit, debit, balance)
     @bank_statement << transaction
-    # @bank_statement.push(date, credit, debit, balance)
+  end
+  
+  # Deposit = credit
+  def deposit(amount)
+    return "#{amount} deposited"
   end
 
-  def credit(amount)
-    @transaction.balance += @transaction.credit
-      return "#{amount} deposited"
-  end
-
-  # Debit is a withdrawal
-  def debit(amount)
-    @transaction.balance -= @transaction.debit
-      return "#{amount} withdrawn"
+  # Withdrawal = debit
+  def withdrawal(amount)
+    return "#{amount} withdrawn"
   end
 
   def date

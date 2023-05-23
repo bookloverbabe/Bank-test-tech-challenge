@@ -8,4 +8,10 @@ class Transaction
     @debit = debit
     @balance = balance
   end
+
+  def deposit(amount)
+    @balance += @credit
+  end
+
+  
 end
