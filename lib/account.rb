@@ -1,27 +1,28 @@
 require 'time'
+require './lib/transaction'
 
-class Account
+class Account < Transaction
 # This class explains what the data does
 # return the date || credit || debit || balance.
 # statement is comprised of key, the date, and the value, amount and balance
-  # Initialize calls upon the 
+  # # Initialize calls upon the 
   def initialize
-    @balance = []
+    @update_balance = []
   end
 
   def balance
-    return @balance.sum
+    return @update_balance.sum
   end
   
   # Credit is a deposit, use dependancy injection from transaction class
   def credit(amount)
-    @balance.sum(amount)
+    @update_balance.sum(amount)
       return "#{amount} deposited"
   end
 
   # Debit is a withdrawal
   def debit(amount)
-    @balance.sum(- amount)
+    @update_balance.sum(- amount)
       return "#{amount} withdrawn"
   end
 
@@ -37,10 +38,10 @@ class Account
     fail "Error: please enter a valid amount" unless valid?(amount)
   end
   
-  # If the user does not  input an amount, return the balance
+  # If the user does not input an amount, return the balance
   def zero_amount(amount)
     if amount == 0
-      return @balance.sum
+      return @update_balance.sum
     end
   end
 end

@@ -1,7 +1,7 @@
 require "account"
 
 # This class defines the data, and inherits the actions from the account class
-class Transaction < Account
+class Transaction
   attr_reader :date, :credit, :debit, :balance
 
   def initialize(date, credit, debit, balance)
