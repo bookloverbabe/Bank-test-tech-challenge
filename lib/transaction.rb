@@ -17,4 +17,8 @@ class Transaction
     @balance -= @debit
   end
 
+  def date(date)
+    return Time.strptime(date, '%d-%m-%Y').strftime('%d-%m-%Y') 
+  end
+
 end

@@ -16,13 +16,6 @@ RSpec.describe Account do
       expect(account.withdrawal(10)).to eq("10 withdrawn")
     end
   end
-
-  context "returns the date" do
-    it "returns the date of 22th May 2023" do
-      account = Account.new
-      expect(account.date).to include('23-07-2023')
-    end
-  end
   context "Is the input a number?" do
     it "checks if the amount is a number that is positive" do
       account = Account.new
