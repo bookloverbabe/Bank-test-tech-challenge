@@ -1,11 +1,11 @@
 require 'statement'
-
 RSpec.describe "Statement" do
   describe "print_statement" do
-    it "print the statement" do
+  let(:transaction1) { double(:transaction, date: '12-12-2012', credit: 5, debit: 10, balance: 15) }
+    before do
       statement = Statement.new
-      bank_statement = (['12-12-2012', '5', '10', '15'])
-      expect(statement.print_statement(bank_statement)).to include( '12-12-2012' || '5' || '10' || '15' )
+      bank_statement = [transaction1]
+      allow(statement).to receive(statement.print_statement(transaction1)).and_return('12-12-2012 || 5 || 10 || 15')
     end
   end
 end

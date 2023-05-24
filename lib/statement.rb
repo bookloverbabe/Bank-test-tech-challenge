@@ -6,7 +6,7 @@ DIVIDER = "||"
 class Statement
   def print_statement(bank_statement)
     # print_heading
-    bank_statement.each { |transaction| puts transaction.date + "||" + transaction.credit.to_s + "||" +  transaction.debit.to_s + "||" + transaction.balance.to_s }.join(',')
+    bank_statement.each { |transaction| puts transaction.date + "||" + transaction.credit + "||" +  transaction.debit + "||" + transaction.balance }
   end
 end
 
