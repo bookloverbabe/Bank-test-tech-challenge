@@ -1,4 +1,3 @@
-require 'time'
 require_relative 'transaction'
 
 # This class explains what the data does. The action.

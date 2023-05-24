@@ -1,3 +1,4 @@
+require 'time'
 # This class defines the data, and inherits the actions from the account class. The definition
 class Transaction
   attr_reader :date, :credit, :debit, :balance
@@ -18,7 +19,7 @@ class Transaction
   end
 
   def date(date)
-    return Time.strptime(date, '%d-%m-%Y').strftime('%d-%m-%Y') 
+    @date = Time.strptime(date, '%d-%m-%Y').strftime('%d-%m-%Y') 
   end
 
 end
